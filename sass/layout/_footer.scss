@@ -1,0 +1,114 @@
+.footer-block .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address-section {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    font-style: normal;
+    line-height: 1.7;
+    color: $footer-white-color;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__text {
+    color: $white-color;
+  }
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-item {
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+  &:last-child {
+    margin-left: auto;
+  }
+}
+
+.footer-item-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: $white-color;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: row;
+
+  &__input {
+    font-size: 16px;
+    line-height: 1.3;
+    width: 358px;
+    height: 50px;
+    text-align: left;
+    padding-left: 16px;
+    border: 1px solid $footer-border-color;
+    border-radius: 4px;
+    margin-right: 12px;
+    color: $footer-white-color;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      cursor: pointer;
+    }
+  }
+  &__botton {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    background-color: $accent-color;
+    display: flex;
+    padding-left: 29px;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: #188ce8;
+    }
+  }
+  &__botton-text {
+    margin-right: 10px;
+  }
+}
+
+.footer-block {
+  background-color: $bg-dark-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
