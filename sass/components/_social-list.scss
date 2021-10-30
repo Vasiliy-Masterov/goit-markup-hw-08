@@ -1,0 +1,42 @@
+.social-list {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $white-color;
+    }
+
+    &--gray {
+      background-color: $bg-footer-icon-color;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &__icon--white {
+    fill: $white-color;
+  }
+}
+
+.team-social-list {
+  justify-content: center;
+}
