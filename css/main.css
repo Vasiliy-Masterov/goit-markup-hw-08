@@ -540,6 +540,10 @@ body {
   color: #2196f3;
 }
 
+.backdrop {
+  z-index: 1;
+}
+
 .nav-section-list__link, .header-list__link {
   font-weight: 500;
   line-height: 1.2;
