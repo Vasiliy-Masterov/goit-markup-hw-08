@@ -21,7 +21,7 @@
     }
   }
   &__menu-icon {
-    fill: #212121;
+    fill: $title-dark-gray-color;
   }
 
   &__button-close {
@@ -43,15 +43,11 @@
     }
   }
   &__close-icon {
-    fill: #212121;
+    fill: $title-dark-gray-color;
   }
   &__container {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,7 +74,6 @@
     font-size: 24px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-top: auto;
     margin-bottom: 64px;
   }
   &__contact-item {
@@ -96,9 +91,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: auto;
   }
   &__social-item {
+    display: flex;
+    justify-content: flex-start;
+
     &:not(:last-child) {
       border-right: 1px solid rgba(33, 33, 33, 0.2);
       padding-right: 10px;
@@ -107,6 +104,7 @@
       padding-left: 10px;
     }
   }
+
   &__social-link {
     font-weight: 500;
     font-size: 18px;
@@ -114,7 +112,4 @@
     letter-spacing: 0.02em;
     color: $accent-color;
   }
-}
-.backdrop {
-  z-index: 1;
 }
