@@ -1,9 +1,22 @@
 .feature-list {
-  
   &__item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-left: 30px;
+    // flex-basis: calc(100% / 4 - 30px);
+    margin-left: 0;
     margin-top: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 480px) {
+      margin-left: 30px;
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 30px);
+    }
   }
 
   &__icon-box {
@@ -15,6 +28,7 @@
     border-radius: 4px;
     margin-bottom: 30px;
   }
+
   &__icon {
     width: 70px;
     height: 70px;
@@ -24,6 +38,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
+    text-align: center;
     color: $title-dark-gray-color;
     text-transform: uppercase;
     margin-bottom: 10px;

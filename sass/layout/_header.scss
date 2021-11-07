@@ -13,6 +13,7 @@
 }
 
 .header-container {
+  position: relative;
   display: flex;
 }
 
@@ -20,12 +21,23 @@
   display: flex;
   align-items: center;
   & .logo {
-    margin-right: 93px;
-    padding: 24px 0 25px 0;
+    padding: 15px 0 16px 0;
+    @media screen and (min-width: 768px) {
+      padding: 25px 0 25px 0;
+      margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 24px 0 25px 0;
+      margin-right: 93px;
+    }
   }
 }
 
 .nav-section-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   display: flex;
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -53,25 +65,62 @@
 }
 
 .header-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
-  align-items: center;
   margin-left: auto;
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__item:first-child {
+      margin-bottom: 10px;
+    }
+    &__item:first-child &__link {
+      padding-top: 21px;
+    }
+    &__item:last-child &__link {
+      padding-bottom: 21px;
+    }
   }
-  &__icon {
-    margin-right: 10px;
-    fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
+
   &__link {
     display: flex;
     align-items: center;
-    padding: 32px 0;
+
     color: $text-gray-color;
+
     @extend %link;
+    font-size: 12px;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      padding: 32px 0;
+    }
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+    fill: currentColor;
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+      width: 16px;
+      height: 12px;
     }
   }
 }
