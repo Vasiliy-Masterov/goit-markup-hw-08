@@ -13,7 +13,7 @@
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
-   !refs.menu.classList.contains('is-hidden') ? refs.body.style.overflow='hidden' : refs.body.style.removeProperty('overfllow');
+   !refs.menu.classList.contains('is-hidden') ? refs.body.style.overflow='hidden' : refs.body.style.removeProperty('overflow');
   }
   function removeMenu(e) {
     if (e.target === refs.menu) {
