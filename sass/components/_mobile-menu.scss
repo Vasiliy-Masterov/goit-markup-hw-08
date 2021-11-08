@@ -77,12 +77,16 @@
     margin-bottom: 64px;
   }
   &__contact-item {
+    &:first-child {
+      font-size: 34px;
+      color: $accent-color;
+    }
     &:not(:last-child) {
       margin-bottom: 32px;
     }
     &:hover,
     :focus {
-      font-size: 34px;
+      // font-size: 34px;
       color: $accent-color;
     }
   }
